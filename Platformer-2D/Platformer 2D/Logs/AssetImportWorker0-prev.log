@@ -1,0 +1,473 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1110; Version 2009; 64bit' Language: 'tr' Physical Memory: 8081 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Projects/Unity/Platformer-2D/Platformer-2D/Platformer 2D
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49710
+Successfully changed project path to: D:/Projects/Unity/Platformer-2D/Platformer-2D/Platformer 2D
+D:/Projects/Unity/Platformer-2D/Platformer-2D/Platformer 2D
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 49.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Projects/Unity/Platformer-2D/Platformer-2D/Platformer 2D/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
+    Vendor:   
+    VRAM:     4018 MB
+    Driver:   30.0.14.7111
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001957 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 60.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.957 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002940 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.315 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2534 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 108.9 MB.
+System memory in use after: 109.0 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2969.
+Total: 3.397600 ms (FindLiveObjects: 0.287900 ms CreateObjectMapping: 0.142400 ms MarkObjects: 2.802600 ms  DeleteObjects: 0.163300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Kings and Pigs/08-Box/Box Pieces 2.png
+  artifactKey: Guid(7163607748055d4478184f6b79622ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/08-Box/Box Pieces 2.png using Guid(7163607748055d4478184f6b79622ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3bd9f4bd360068281ec376971d1b0c7') in 0.158887 seconds 
+  Import took 0.163021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/Kings and Pigs/03-Pig/Dead (34x28).png
+  artifactKey: Guid(6f4b5ae6b51d35b4298c1ec33e94c255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/03-Pig/Dead (34x28).png using Guid(6f4b5ae6b51d35b4298c1ec33e94c255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2cb68f2d988b26eeda243469c60d62a') in 0.027316 seconds 
+  Import took 0.036197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Kings and Pigs/08-Box/Box Pieces 1.png
+  artifactKey: Guid(c1b46755f5030934b8b9cc5ccbf760fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/08-Box/Box Pieces 1.png using Guid(c1b46755f5030934b8b9cc5ccbf760fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a755fcf85abbc8caf0be4a21e6f68b38') in 0.021134 seconds 
+  Import took 0.028527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Boom In (24x8).png
+  artifactKey: Guid(1681474c0f8cfcf44869a4b8fc0997c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Boom In (24x8).png using Guid(1681474c0f8cfcf44869a4b8fc0997c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6ff09756c6f547225f5e046fd1fe31') in 0.024252 seconds 
+  Import took 0.030333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Dead In (24x8).png
+  artifactKey: Guid(9d51a7ec9a49ff24eb608a6ee2770e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Dead In (24x8).png using Guid(9d51a7ec9a49ff24eb608a6ee2770e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78e63e028ec84319a6db6e882d5ca68e') in 0.023021 seconds 
+  Import took 0.029202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Kings and Pigs/11-Door/Closiong (46x56).png
+  artifactKey: Guid(84cceb6ee6e88ee44989a62ed5626ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/11-Door/Closiong (46x56).png using Guid(84cceb6ee6e88ee44989a62ed5626ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daa752bb1db7bfc7152d2dbce1f42728') in 0.027323 seconds 
+  Import took 0.034981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Boom Out (24x8).png
+  artifactKey: Guid(ad99fdbb665d0dc448e906c904e86616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Boom Out (24x8).png using Guid(ad99fdbb665d0dc448e906c904e86616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdecbdd0cd6ba79a4a46c6708fcff6dd') in 0.019474 seconds 
+  Import took 0.026243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Kings and Pigs/06-Pig Hide in the Box/Ground (26x20).png
+  artifactKey: Guid(e68f1a9f161f0e647a6a9ffd87cedc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/06-Pig Hide in the Box/Ground (26x20).png using Guid(e68f1a9f161f0e647a6a9ffd87cedc74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '392ad9bf7a515b4199f6c485d34f4849') in 0.025184 seconds 
+  Import took 0.032074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Kings and Pigs/09-Bomb/Bomb On (52x56).png
+  artifactKey: Guid(7634d9e50c23780428fe046ecdd2d143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/09-Bomb/Bomb On (52x56).png using Guid(7634d9e50c23780428fe046ecdd2d143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf13ef774b579edc3fc22131664782c4') in 0.026746 seconds 
+  Import took 0.032736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Hi Out (24x8).png
+  artifactKey: Guid(b6c980ca0f24fba4a99effaf9d3f399c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Hi Out (24x8).png using Guid(b6c980ca0f24fba4a99effaf9d3f399c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7751c7379bb13aec67ee5466e5044add') in 0.023446 seconds 
+  Import took 0.031644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Hello Out (24x8).png
+  artifactKey: Guid(c4060c3bd6943c542901aedf5b13834c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Hello Out (24x8).png using Guid(c4060c3bd6943c542901aedf5b13834c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '729fcfdbe1cc11c9a4c3abbe188a4085') in 0.022887 seconds 
+  Import took 0.027594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Kings and Pigs/08-Box/Hit.png
+  artifactKey: Guid(6a6aea3ab6f8b2c47a07aa35fbae0741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/08-Box/Hit.png using Guid(6a6aea3ab6f8b2c47a07aa35fbae0741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd02a7f24f62f2991827968d8b66dcacc') in 0.024724 seconds 
+  Import took 0.029795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Kings and Pigs/03-Pig/Hit (34x28).png
+  artifactKey: Guid(dd73403f5590bcf46a42c7c230e1b559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/03-Pig/Hit (34x28).png using Guid(dd73403f5590bcf46a42c7c230e1b559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4005089da02bc69a29ba807bbe824b63') in 0.023899 seconds 
+  Import took 0.029480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Kings and Pigs/02-King Pig/Fall (38x28).png
+  artifactKey: Guid(e7a4850edc3cf5249aa1c0bc45727227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/02-King Pig/Fall (38x28).png using Guid(e7a4850edc3cf5249aa1c0bc45727227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46452c8458218349e2ccfa1bae891753') in 0.020812 seconds 
+  Import took 0.025610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Kings and Pigs/02-King Pig/Ground (38x28).png
+  artifactKey: Guid(4892f8a4246a80042a03fcbfe4469428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/02-King Pig/Ground (38x28).png using Guid(4892f8a4246a80042a03fcbfe4469428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b35923d685e2a612f287487bfd431056') in 0.017063 seconds 
+  Import took 0.021046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Kings and Pigs/10-Cannon/Cannon Ball.png
+  artifactKey: Guid(5d203709ebf1f6b47b191be297d7c36c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/10-Cannon/Cannon Ball.png using Guid(5d203709ebf1f6b47b191be297d7c36c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f64dcc23db30c8a1c7890a2579c47635') in 0.019886 seconds 
+  Import took 0.025848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Kings and Pigs/03-Pig/Ground (34x28).png
+  artifactKey: Guid(ce55d39775d6dd944a8e7824dcd8f062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/03-Pig/Ground (34x28).png using Guid(ce55d39775d6dd944a8e7824dcd8f062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e97387052472edc70661dc4764610c') in 0.020893 seconds 
+  Import took 0.026439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Kings and Pigs/09-Bomb/Boooooom (52x56).png
+  artifactKey: Guid(cf96cde7b82036249be4bbc76b3edd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/09-Bomb/Boooooom (52x56).png using Guid(cf96cde7b82036249be4bbc76b3edd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3fafba51ecf804eb2688c9cb85ad66') in 0.021366 seconds 
+  Import took 0.025879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Kings and Pigs/06-Pig Hide in the Box/Fall (26x20).png
+  artifactKey: Guid(2c971d8c6aa500f4ca70e297b841280e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/06-Pig Hide in the Box/Fall (26x20).png using Guid(2c971d8c6aa500f4ca70e297b841280e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5fb2e264f294471ebb565ee9ed69796') in 0.018028 seconds 
+  Import took 0.023892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Kings and Pigs/02-King Pig/Dead (38x28).png
+  artifactKey: Guid(3092e73d8859cf04798bb0f572d084b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/02-King Pig/Dead (38x28).png using Guid(3092e73d8859cf04798bb0f572d084b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ab63253e300016a4935f6534e683e9c') in 0.023463 seconds 
+  Import took 0.028038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Kings and Pigs/09-Bomb/Bomb Off.png
+  artifactKey: Guid(3c300fdf1e7319747b823aadcca69d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/09-Bomb/Bomb Off.png using Guid(3c300fdf1e7319747b823aadcca69d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328335ce5e7db32f5ea3cfd10a26673e') in 0.021813 seconds 
+  Import took 0.026665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Kings and Pigs/08-Box/Box Pieces 3.png
+  artifactKey: Guid(bd813c2e4ac96a944940814fefdbb120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/08-Box/Box Pieces 3.png using Guid(bd813c2e4ac96a944940814fefdbb120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8916221c267aa87a209a5357af54d9fa') in 0.018765 seconds 
+  Import took 0.023490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Dead Out (24x8).png
+  artifactKey: Guid(796482088c7762d4691dabcd3ecbba81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Dead Out (24x8).png using Guid(796482088c7762d4691dabcd3ecbba81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6919433a2eda30fae52fa5b6774dc4b6') in 0.019338 seconds 
+  Import took 0.024384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Hi In (24x8).png
+  artifactKey: Guid(0d04ab7140d9bf141b1308dc8bb24193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Hi In (24x8).png using Guid(0d04ab7140d9bf141b1308dc8bb24193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73d28fc97deb834eeaab5a2443f0d6cf') in 0.019680 seconds 
+  Import took 0.023942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Kings and Pigs/08-Box/Box Pieces 4.png
+  artifactKey: Guid(267ffd62e41a5f140a56bca9af0d1801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/08-Box/Box Pieces 4.png using Guid(267ffd62e41a5f140a56bca9af0d1801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd555311504a77d1cbad9bdf48793c151') in 0.020567 seconds 
+  Import took 0.025149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Kings and Pigs/12-Live and Coins/Big Heart Idle (18x14).png
+  artifactKey: Guid(f2dd71946fcfbd941a66679a5f4c22ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/12-Live and Coins/Big Heart Idle (18x14).png using Guid(f2dd71946fcfbd941a66679a5f4c22ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dca287a444197d7ae2452ce39a73c186') in 0.020925 seconds 
+  Import took 0.025587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Kings and Pigs/13-Dialogue Boxes/Hello In (24x8).png
+  artifactKey: Guid(714dde445148f0043a3839ff6b261120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/13-Dialogue Boxes/Hello In (24x8).png using Guid(714dde445148f0043a3839ff6b261120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b52937c616848e1e1844520d110ea71') in 0.021285 seconds 
+  Import took 0.027174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Kings and Pigs/03-Pig/Fall (34x28).png
+  artifactKey: Guid(ca1fabffa1bd3ad4885b615f34ffaebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/03-Pig/Fall (34x28).png using Guid(ca1fabffa1bd3ad4885b615f34ffaebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64883e4bee4fccf0ed06848c682fbae9') in 0.019420 seconds 
+  Import took 0.024675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030227 seconds.
+  path: Assets/Kings and Pigs/02-King Pig/Hit (38x28).png
+  artifactKey: Guid(ad388a17008b8ba44a7f88b2301d1947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/02-King Pig/Hit (38x28).png using Guid(ad388a17008b8ba44a7f88b2301d1947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '007837859e481a95bb348bd5952a2d30') in 0.020472 seconds 
+  Import took 0.026147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.133081 seconds.
+  path: Assets/Kings and Pigs/10-Cannon/Idle.png
+  artifactKey: Guid(8d5d9631da5036a4ebd2818071bbe934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/10-Cannon/Idle.png using Guid(8d5d9631da5036a4ebd2818071bbe934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b2cd369d95cdbeab1bb436ba69a10dd') in 0.017534 seconds 
+  Import took 0.021659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Kings and Pigs/11-Door/Idle.png
+  artifactKey: Guid(00bccb2387bd2aa46a4677ca747f4bcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/11-Door/Idle.png using Guid(00bccb2387bd2aa46a4677ca747f4bcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e48c8ae59d7347a237bb6020a79468fb') in 0.017873 seconds 
+  Import took 0.023150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.275470 seconds.
+  path: Assets/Kings and Pigs/08-Box/Idle.png
+  artifactKey: Guid(9bb2d6570d5b8d54ab1be2294038ca7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/08-Box/Idle.png using Guid(9bb2d6570d5b8d54ab1be2294038ca7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c21b0a79be7cf1362a463b1c6120a3') in 0.018881 seconds 
+  Import took 0.023927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Kings and Pigs/05-Pig Thowing a Bomb/Idle (26x26).png
+  artifactKey: Guid(cc99fe2ef0fcc394287c7cb90c0cbfa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/05-Pig Thowing a Bomb/Idle (26x26).png using Guid(cc99fe2ef0fcc394287c7cb90c0cbfa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '683adc10b183060316dcee6d2e09227c') in 0.018086 seconds 
+  Import took 0.022441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014653 seconds.
+  path: Assets/Kings and Pigs/04-Pig Throwing a Box/Idle (26x30).png
+  artifactKey: Guid(8d8eabe98e39942478c7b9c34373ad53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/04-Pig Throwing a Box/Idle (26x30).png using Guid(8d8eabe98e39942478c7b9c34373ad53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '826fbf9e4a6d2c570e7908b4c39d414e') in 0.019714 seconds 
+  Import took 0.024792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Kings and Pigs/03-Pig/Idle (34x28).png
+  artifactKey: Guid(b168e2aa02906884a963c6604352f404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/03-Pig/Idle (34x28).png using Guid(b168e2aa02906884a963c6604352f404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bdadd656602c931b070f5a0b99cd17e') in 0.023842 seconds 
+  Import took 0.028352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.364718 seconds.
+  path: Assets/Kings and Pigs/02-King Pig/Idle (38x28).png
+  artifactKey: Guid(d05492647b60fcf48a5bbfd3b65efc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/02-King Pig/Idle (38x28).png using Guid(d05492647b60fcf48a5bbfd3b65efc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4867ddbce74bb81a0f7f9511be714606') in 0.020111 seconds 
+  Import took 0.024468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007238 seconds.
+  path: Assets/Kings and Pigs/02-King Pig/Idle (38x28).png
+  artifactKey: Guid(d05492647b60fcf48a5bbfd3b65efc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kings and Pigs/02-King Pig/Idle (38x28).png using Guid(d05492647b60fcf48a5bbfd3b65efc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4867ddbce74bb81a0f7f9511be714606') in 0.006192 seconds 
+  Import took 0.010871 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002867 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.079 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2527 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.0 MB.
+System memory in use after: 112.1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3021.
+Total: 2.674900 ms (FindLiveObjects: 0.268600 ms CreateObjectMapping: 0.111300 ms MarkObjects: 2.199200 ms  DeleteObjects: 0.094800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004860 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.540 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2527 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.1 MB.
+System memory in use after: 112.2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3025.
+Total: 4.005800 ms (FindLiveObjects: 0.397600 ms CreateObjectMapping: 0.203200 ms MarkObjects: 3.246000 ms  DeleteObjects: 0.157600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 157.137769 seconds.
+  path: Assets/Scripts/PlayerScript.cs
+  artifactKey: Guid(637546cd86a5a8444b9db5535b5af294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerScript.cs using Guid(637546cd86a5a8444b9db5535b5af294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f4cd5b7213db980c5f76f94d558ded') in 0.019731 seconds 
+  Import took 0.026039 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002756 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.072 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2527 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.1 MB.
+System memory in use after: 112.2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3029.
+Total: 3.034100 ms (FindLiveObjects: 0.323000 ms CreateObjectMapping: 0.156300 ms MarkObjects: 2.375300 ms  DeleteObjects: 0.178400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
