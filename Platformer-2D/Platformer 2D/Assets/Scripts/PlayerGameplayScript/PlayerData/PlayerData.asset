@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   maxSpeed: 10
-  accelerateValue: 6
-  dragValue: 40
+  dragLerpValue: 1
   groundLayerLength: 1
   jumpVelocity: 15
   jumpCount: 1
   jumpHeightMultiplier: 0.5
   attackVelocity: 13
+  hitForceY: 6
   health: 3

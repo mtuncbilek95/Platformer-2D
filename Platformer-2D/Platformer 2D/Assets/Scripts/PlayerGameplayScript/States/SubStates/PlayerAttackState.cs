@@ -24,6 +24,7 @@ public class PlayerAttackState : PlayerAbilityState
     {
         base.Enter();
         player.SetVelocityX(0f);
+        player.SetVelocityY(0f);
     }
 
     public override void Exit()

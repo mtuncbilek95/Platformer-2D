@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     public PlayerLandState LandState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
     public PlayerAttackState AttackState { get; private set; }
-
+    public PlayerHitState HitState { get; private set; }
     #endregion
 
     #region Variables
@@ -50,6 +50,7 @@ public class PlayerScript : MonoBehaviour
         InAirState = new PlayerInAirState(this, StateMachine, playerData, "jumpState");
         LandState = new PlayerLandState(this, StateMachine, playerData, "landState");
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attackState");
+        HitState = new PlayerHitState(this, StateMachine, playerData, "hitState");
         
     }
     private void Start()
@@ -80,14 +81,9 @@ public class PlayerScript : MonoBehaviour
     #region Set Functions
     public void SetVelocityX(float velocity)
     {
-        RB.AddForce(playerData.accelerateValue * Vector2.right * InputHandler.NormXInput, ForceMode2D.Force);
-
-        if(Mathf.Abs(RB.velocity.x) > playerData.maxSpeed)
-        {
-            workspace.Set(Mathf.Sign(RB.velocity.x) * velocity, CurrentVelocity.y);
-            RB.velocity = workspace;
-            CurrentVelocity = workspace;
-        }
+        workspace.Set(velocity, CurrentVelocity.y);
+        RB.velocity = workspace;
+        CurrentVelocity = workspace;
 
     }
 
@@ -97,6 +93,7 @@ public class PlayerScript : MonoBehaviour
         RB.velocity = workspace;
         CurrentVelocity = workspace;
     }
+
     #endregion
 
     #region Check Functions

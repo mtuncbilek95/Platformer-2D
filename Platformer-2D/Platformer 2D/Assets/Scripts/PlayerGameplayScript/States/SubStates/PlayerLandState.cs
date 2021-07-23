@@ -11,13 +11,12 @@ public class PlayerLandState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.RB.drag = playerData.dragValue;
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.RB.drag = 0f;
+
     }
 
     public override void LogicUpdate()

@@ -8,8 +8,8 @@ public class PlayerData : ScriptableObject
     [Header("Character Movement Values")]
     [Range(0,20)]
     public int maxSpeed;
-    [Range(0,100)]
-    public int accelerateValue, dragValue;
+    [Range(0, 2)]
+    public float dragLerpValue;
 
     [Range(0,10)]
     public float groundLayerLength;
@@ -20,8 +20,8 @@ public class PlayerData : ScriptableObject
     public float jumpHeightMultiplier = 0.5f;
 
     [Header("Character Attack Values")]
-    [Range(0,20)]
-    public float attackVelocity;
+    [Range(0, 20)]
+    public float attackVelocity, hitForceY;
 
     [Header("Character In-Game Status")]
     public int health;

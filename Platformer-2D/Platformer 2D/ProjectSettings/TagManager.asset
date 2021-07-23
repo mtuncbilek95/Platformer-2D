@@ -8,13 +8,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
+  - Enemy
+  - Door
+  - Interactable
   - 
   - 
   - 
@@ -44,15 +44,15 @@ TagManager:
   - name: Ground
     uniqueID: 2431552307
     locked: 0
-  - name: Player
-    uniqueID: 2742455903
-    locked: 0
-  - name: Enemy
-    uniqueID: 1705545103
+  - name: Doors
+    uniqueID: 1569570245
     locked: 0
   - name: Interactable
     uniqueID: 718712769
     locked: 0
-  - name: Doors
-    uniqueID: 1569570245
+  - name: Enemy
+    uniqueID: 1705545103
+    locked: 0
+  - name: Player
+    uniqueID: 2742455903
     locked: 0

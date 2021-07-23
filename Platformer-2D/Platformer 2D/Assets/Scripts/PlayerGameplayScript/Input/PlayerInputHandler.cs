@@ -22,6 +22,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool AttackInput { get; private set; }
     #endregion
 
+    public bool DebugInput { get; private set; }
+    
     #region Unity Callbacks
     private void Update()
     {
@@ -62,6 +64,19 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.canceled)
         {
             AttackInput = false;
+        }
+    }
+
+    public void OnDebugInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            DebugInput = true;
+        }
+
+        if (context.canceled)
+        {
+            DebugInput = false;
         }
     }
     #endregion

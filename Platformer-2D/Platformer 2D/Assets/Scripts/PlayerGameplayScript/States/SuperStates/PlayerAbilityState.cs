@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerAbilityState : PlayerState
 {
     protected bool isAbilityDone;
+    protected bool isGrounded;
 
-    private bool isGrounded;
+    protected int xInput;    
 
     public PlayerAbilityState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animationBoolName) : base(player, stateMachine, playerData, animationBoolName)
     {
@@ -32,6 +33,7 @@ public class PlayerAbilityState : PlayerState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        xInput = player.InputHandler.NormXInput;
         if (isAbilityDone)
         {
             if (isGrounded && player.CurrentVelocity.y < 0.01f)
