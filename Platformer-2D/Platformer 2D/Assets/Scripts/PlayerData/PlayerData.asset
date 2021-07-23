@@ -19,4 +19,5 @@ MonoBehaviour:
   jumpVelocity: 15
   jumpCount: 1
   jumpHeightMultiplier: 0.5
+  attackVelocity: 13
   health: 3

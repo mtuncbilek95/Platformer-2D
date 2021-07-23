@@ -7,6 +7,7 @@ public class PlayerInAirState : PlayerState
     protected bool isGrounded;
     protected bool jumpInput;
     protected bool jumpInputStop;
+    protected bool attackInput;
     public bool isJumping;
 
     protected int xInput;
@@ -38,10 +39,14 @@ public class PlayerInAirState : PlayerState
         xInput = player.InputHandler.NormXInput;
         jumpInput = player.InputHandler.JumpInput;
         jumpInputStop = player.InputHandler.JumpInputStop;
-
+        attackInput = player.InputHandler.AttackInput;
         CheckJumpMultiplier();
+        if (attackInput && player.AttackState.CanAttack())
+        {
+            stateMachine.ChangeState(player.AttackState);
+        }
 
-        if (isGrounded && player.CurrentVelocity.y < 0.01f)
+        else if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.LandState);
         }

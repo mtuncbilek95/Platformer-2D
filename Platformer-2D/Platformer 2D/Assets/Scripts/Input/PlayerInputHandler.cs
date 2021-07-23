@@ -18,13 +18,18 @@ public class PlayerInputHandler : MonoBehaviour
     private float JumpHoldTime = 0.2f;
     #endregion
 
+    #region Attack Variables
+    public bool AttackInput { get; private set; }
+    #endregion
+
+    #region Unity Callbacks
     private void Update()
     {
         CheckJumpTime();
     }
+    #endregion
 
-    public void UseJumpInput() => JumpInput = false;
-
+    #region InputAction Callbacks
     public void OnMovementInput(InputAction.CallbackContext context)
     {
         MovementRawInput = context.ReadValue<Vector2>();
@@ -48,6 +53,22 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    public void OnAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            AttackInput = true;
+        }
+        if (context.canceled)
+        {
+            AttackInput = false;
+        }
+    }
+    #endregion
+
+    #region Extra Functions 
+    public void UseJumpInput() => JumpInput = false;
+
     public void CheckJumpTime() 
     {
         if(Time.time >= JumpInputTime + JumpHoldTime)
@@ -55,4 +76,5 @@ public class PlayerInputHandler : MonoBehaviour
             JumpInput = false;
         }
     }
+    #endregion
 }

@@ -6,7 +6,9 @@ public class PlayerGroundedState : PlayerState
 {
     protected bool isGrounded;
     protected bool jumpInput;
+    protected bool attackInput;
     protected int xInput;
+    
     public PlayerGroundedState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -33,8 +35,13 @@ public class PlayerGroundedState : PlayerState
         base.LogicUpdate();
         xInput = player.InputHandler.NormXInput;
         jumpInput = player.InputHandler.JumpInput;
-
-        if (player.JumpState.CanJump() && jumpInput)
+        attackInput = player.InputHandler.AttackInput;
+        
+        if (attackInput && player.AttackState.CanAttack())
+        {
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if (player.JumpState.CanJump() && jumpInput)
         {
             player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.JumpState);

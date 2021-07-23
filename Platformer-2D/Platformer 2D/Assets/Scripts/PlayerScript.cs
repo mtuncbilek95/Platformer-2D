@@ -25,6 +25,7 @@ public class PlayerScript : MonoBehaviour
     public PlayerJumpState JumpState { get; private set; }
     public PlayerLandState LandState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
+    public PlayerAttackState AttackState { get; private set; }
 
     #endregion
 
@@ -48,6 +49,7 @@ public class PlayerScript : MonoBehaviour
         JumpState = new PlayerJumpState(this, StateMachine, playerData, "jumpState");
         InAirState = new PlayerInAirState(this, StateMachine, playerData, "jumpState");
         LandState = new PlayerLandState(this, StateMachine, playerData, "landState");
+        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attackState");
         
     }
     private void Start()
@@ -55,20 +57,27 @@ public class PlayerScript : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         InputHandler = GetComponent<PlayerInputHandler>();
         Animator = GetComponent<Animator>();
+
         StateMachine.Initialize(IdleState);
+
         FacingDirection = 1;
     }
     private void Update()
     {
         stateNames.text = StateMachine.CurrentState.animBoolName;
+
         CurrentVelocity = RB.velocity;
+
         StateMachine.CurrentState.LogicUpdate();
+
     }
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
     }
     #endregion
+
+    #region Set Functions
     public void SetVelocityX(float velocity)
     {
         RB.AddForce(playerData.accelerateValue * Vector2.right * InputHandler.NormXInput, ForceMode2D.Force);
@@ -88,6 +97,10 @@ public class PlayerScript : MonoBehaviour
         RB.velocity = workspace;
         CurrentVelocity = workspace;
     }
+    #endregion
+
+    #region Check Functions
+
     public bool IsGrounded()
     {
         return Physics2D.Raycast(groundCheckObject.position * playerData.groundLayerLength, Vector2.down, playerData.groundLayerLength, checkGround);
@@ -102,15 +115,21 @@ public class PlayerScript : MonoBehaviour
     private void Flip()
     {
         FacingDirection *= -1;
+
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
+
         Gizmos.DrawLine(groundCheckObject.position, groundCheckObject.position + Vector3.down * playerData.groundLayerLength);
     }
 
+    #endregion
+
+    #region Animation Trigger Functions
     private void AnimationTriggerFunction() => StateMachine.CurrentState.AnimationTrigger();
     private void AnimationFinishTriggerFunction() => StateMachine.CurrentState.AnimationFinishTrigger();
+    #endregion
 }

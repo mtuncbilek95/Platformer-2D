@@ -19,6 +19,10 @@ public class PlayerData : ScriptableObject
     public int jumpCount = 1;
     public float jumpHeightMultiplier = 0.5f;
 
+    [Header("Character Attack Values")]
+    [Range(0,20)]
+    public float attackVelocity;
+
     [Header("Character In-Game Status")]
     public int health;
 }
