@@ -41,19 +41,18 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.AttackState);
         }
-        else if (player.InputHandler.DebugInput)
-        {
-            stateMachine.ChangeState(player.HitState);
-        }
+
         else if (player.JumpState.CanJump() && jumpInput)
         {
             player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.JumpState);
         }
+
         else if (!isGrounded)
         {
             stateMachine.ChangeState(player.InAirState);
         }
+
     }
 
     public override void PhysicsUpdate()

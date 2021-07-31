@@ -12,6 +12,7 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.Enter();
         player.SetVelocityX(0f);
+        player.canTakeDamage = true;
     }
 
     public override void Exit()
@@ -27,7 +28,6 @@ public class PlayerIdleState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.MoveState);
         }
-
     }
 
     public override void PhysicsUpdate()

@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBaseData : MonoBehaviour
+[CreateAssetMenu (fileName ="newEnemyData" ,menuName="Data/EnemyData/EnemyBaseData")]
+public class EnemyBaseData : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int health;
+    
+    public int maxSpeed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float weaponRadius;
+
+    public bool canTakeDamage;
+
+    public float ledgeCheckLength;
+    public float playerCheckRadius;
 }

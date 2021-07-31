@@ -9,16 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5a2dde9c034754e9c1d424b0418900, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: 3894c2d71cf87644f8b47cb24073918d, type: 3}
+  m_Name: EnemyBaseData
   m_EditorClassIdentifier: 
-  maxSpeed: 10
-  dragLerpValue: 1
-  groundLayerLength: 1
-  jumpVelocity: 15
-  jumpCount: 1
-  jumpHeightMultiplier: 0.5
-  attackVelocity: 13
-  hitForceY: 6
-  weaponRaycastRadius: 0.61
-  health: 3
+  health: 5
+  maxSpeed: 3
+  weaponRadius: 0.6
+  canTakeDamage: 1
+  ledgeCheckLength: 1
+  playerCheckRadius: 0.3

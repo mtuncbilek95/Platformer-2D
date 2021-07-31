@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     #endregion
 
     #region Variables
+
     private Vector2 workspace;
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
@@ -40,6 +41,8 @@ public class PlayerScript : MonoBehaviour
     public LayerMask checkGround;
     public LayerMask checkEnemy;
     public Vector3 groundRaycastOffset;
+
+    public bool canTakeDamage;
     #endregion
 
     #region Unity Callback Functions
@@ -75,6 +78,7 @@ public class PlayerScript : MonoBehaviour
         StateMachine.CurrentState.LogicUpdate();
 
     }
+
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
@@ -98,31 +102,26 @@ public class PlayerScript : MonoBehaviour
     }
 
     #endregion
-    
+
     #region Check Functions
 
+    public void HitEnemy()
+    {
+        Collider2D[] enemyList = Physics2D.OverlapCircleAll(weaponRaycastObject.position, playerData.weaponRaycastRadius);
+        
+        foreach(Collider2D collider in enemyList)
+        {
+            IDamageable enemy = collider.GetComponent<IDamageable>();
+            enemy?.DamageEnemy();
+        }
+
+    }
     public bool IsGrounded()
     {
         return Physics2D.Raycast(groundCheckObject.position + groundRaycastOffset, Vector2.down, playerData.groundLayerLength, checkGround) ||
                                 Physics2D.Raycast(groundCheckObject.position - groundRaycastOffset, Vector2.down, playerData.groundLayerLength, checkGround);
 
     }
-
-    public void HitEnemy()
-    {
-        Collider2D[] collider = Physics2D.OverlapCircleAll(weaponRaycastObject.position, playerData.weaponRaycastRadius);
-
-        foreach (Collider2D collision in collider)
-        {
-            IDamageable enemy = collision.GetComponent<IDamageable>();
-            if(enemy != null)
-            {
-                enemy.GetDamage();
-            }
-        }
-
-    }
-
     public void CheckIfShouldFlip(int xInput)
     {
         if (xInput != 0 && xInput != FacingDirection)
@@ -151,5 +150,13 @@ public class PlayerScript : MonoBehaviour
     #region Animation Trigger Functions
     private void AnimationTriggerFunction() => StateMachine.CurrentState.AnimationTrigger();
     private void AnimationFinishTriggerFunction() => StateMachine.CurrentState.AnimationFinishTrigger();
+    public void DamageTaken()
+    {
+        if (canTakeDamage)
+        {
+            StateMachine.ChangeState(HitState);
+        }
+    }
+
     #endregion
 }

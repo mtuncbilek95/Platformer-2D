@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackState : PlayerAbilityState
 {   
-    private float attackBlockTime = 0.5f;
+    private float attackBlockTime = 0.6f;
     public PlayerAttackState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animationBoolName) : base(player, stateMachine, playerData, animationBoolName)
     {
     }
@@ -23,9 +23,8 @@ public class PlayerAttackState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
-        player.SetVelocityX(0f);
-        player.SetVelocityY(3f);
         player.HitEnemy();
+        player.SetVelocityY(6f);
     }
 
     public override void Exit()

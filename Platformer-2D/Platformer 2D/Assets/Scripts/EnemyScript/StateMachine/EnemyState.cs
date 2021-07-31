@@ -6,6 +6,7 @@ public class EnemyState
 {
     public EnemyBaseScript enemyBase;
     public EnemyStateMachine stateMachine;
+    public EnemyBaseData enemyData;
 
     public string animBoolName;
     
@@ -13,10 +14,11 @@ public class EnemyState
 
     public bool isAnimationFinished;
 
-    public EnemyState(EnemyBaseScript enemyBase, EnemyStateMachine stateMachine, string animBoolName)
+    public EnemyState(EnemyBaseScript enemyBase, EnemyStateMachine stateMachine, EnemyBaseData enemyData, string animBoolName)
     {
         this.enemyBase = enemyBase;
         this.stateMachine = stateMachine;
+        this.enemyData = enemyData;
         this.animBoolName = animBoolName;
     }
 

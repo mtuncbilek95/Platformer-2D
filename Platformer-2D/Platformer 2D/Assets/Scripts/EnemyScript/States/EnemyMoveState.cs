@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMoveState : EnemyState
 {
-    public EnemyMoveState(EnemyBaseScript enemyBase, EnemyStateMachine stateMachine, string animBoolName) : base(enemyBase, stateMachine, animBoolName)
+    public EnemyMoveState(EnemyBaseScript enemyBase, EnemyStateMachine stateMachine, EnemyBaseData enemyData, string animBoolName) : base(enemyBase, stateMachine, enemyData, animBoolName)
     {
     }
 
@@ -16,6 +16,7 @@ public class EnemyMoveState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        enemyData.canTakeDamage = true;
     }
 
     public override void Exit()
@@ -26,6 +27,24 @@ public class EnemyMoveState : EnemyState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        enemyBase.SetVelocityX(enemyData.maxSpeed * enemyBase.FacingDirection);
+
+        if (!enemyBase.CheckIfGrounded())
+        {
+            stateMachine.ChangeState(enemyBase.IdleState);
+        }
+
+        else if(enemyBase.PlayerCheckFront() && !enemyBase.PlayerCheckBack() && enemyBase.AttackState.canAttack)
+        {
+            stateMachine.ChangeState(enemyBase.AttackState);
+        }
+
+        else if(!enemyBase.PlayerCheckFront() && enemyBase.PlayerCheckBack() && enemyBase.AttackState.canAttack)
+        {
+            enemyBase.Flip();
+            stateMachine.ChangeState(enemyBase.AttackState);
+        }
     }
 
     public override void PhysicsUpdate()
