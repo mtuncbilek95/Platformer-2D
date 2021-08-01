@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHurtState : EnemyState
 {
-    private int hitForce = 100;
+    private float hitForce = 100f;
 
     public EnemyHurtState(EnemyBaseScript enemyBase, EnemyStateMachine stateMachine, EnemyBaseData enemyData, string animBoolName) : base(enemyBase, stateMachine, enemyData, animBoolName)
     {
@@ -33,7 +33,6 @@ public class EnemyHurtState : EnemyState
         enemyBase.SetVelocityX(0f);
         enemyBase.RB.AddForce(hitForce * Vector2.up);
         enemyBase.Health--;
-        Debug.Log(enemyBase.Health);
     }
 
     public override void Exit()
