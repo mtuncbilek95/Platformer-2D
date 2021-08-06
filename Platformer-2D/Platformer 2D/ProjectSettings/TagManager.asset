@@ -16,7 +16,7 @@ TagManager:
   - Enemy
   - Door
   - Interactable
-  - 
+  - Decorations
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Decorations
+    uniqueID: 1189306817
     locked: 0
   - name: Ground
     uniqueID: 2431552307

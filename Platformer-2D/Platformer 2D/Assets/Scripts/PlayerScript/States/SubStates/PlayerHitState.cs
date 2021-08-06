@@ -50,6 +50,11 @@ public class PlayerHitState : PlayerAbilityState
             stateMachine.ChangeState(player.IdleState);
         }
 
+        else if(player.Health <= 0)
+        {
+            stateMachine.ChangeState(player.DeadState);
+        }
+
     }
 
     public override void PhysicsUpdate()

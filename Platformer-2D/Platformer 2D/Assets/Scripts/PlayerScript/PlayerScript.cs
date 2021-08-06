@@ -16,7 +16,6 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] private PlayerData playerData;
 
-    public Text stateNames;
     #endregion
 
     #region States
@@ -27,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     public PlayerInAirState InAirState { get; private set; }
     public PlayerAttackState AttackState { get; private set; }
     public PlayerHitState HitState { get; private set; }
+    public PlayerDeadState DeadState { get; private set; }
     #endregion
 
     #region Variables
@@ -43,6 +43,8 @@ public class PlayerScript : MonoBehaviour
     public Vector3 groundRaycastOffset;
 
     public bool canTakeDamage;
+
+    public int Health;
     #endregion
 
     #region Unity Callback Functions
@@ -57,6 +59,7 @@ public class PlayerScript : MonoBehaviour
         LandState = new PlayerLandState(this, StateMachine, playerData, "landState");
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attackState");
         HitState = new PlayerHitState(this, StateMachine, playerData, "hitState");
+        DeadState = new PlayerDeadState(this, StateMachine, playerData, "deadState");
         
     }
     private void Start()
@@ -68,15 +71,13 @@ public class PlayerScript : MonoBehaviour
         StateMachine.Initialize(IdleState);
 
         FacingDirection = 1;
+
+        Health = playerData.health;
     }
     private void Update()
     {
-        stateNames.text = StateMachine.CurrentState.animBoolName;
-
         CurrentVelocity = RB.velocity;
-
         StateMachine.CurrentState.LogicUpdate();
-
     }
 
     private void FixedUpdate()
@@ -155,6 +156,7 @@ public class PlayerScript : MonoBehaviour
         if (canTakeDamage)
         {
             StateMachine.ChangeState(HitState);
+            Health--;
         }
     }
 

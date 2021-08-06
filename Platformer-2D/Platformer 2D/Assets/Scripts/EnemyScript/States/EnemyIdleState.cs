@@ -70,7 +70,7 @@ public class EnemyIdleState : EnemyState
 
     public void SetIdleTime()
     {
-        idleTime = Random.Range(0.5f, 2f);
+        idleTime = Random.Range(0f, 0.5f);
         attackTime = Random.Range(0.5f, 1f);
     }
 }

@@ -26,5 +26,5 @@ public class PlayerData : ScriptableObject
     public float weaponRaycastRadius;
 
     [Header("Character In-Game Status")]
-    public int health;
+    public int health = 3;
 }
