@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMoveState : EnemyState
 {
+    private float attackTime;
     public EnemyMoveState(EnemyBaseScript enemyBase, EnemyStateMachine stateMachine, EnemyBaseData enemyData, string animBoolName) : base(enemyBase, stateMachine, enemyData, animBoolName)
     {
     }
@@ -35,16 +36,22 @@ public class EnemyMoveState : EnemyState
             stateMachine.ChangeState(enemyBase.IdleState);
         }
 
-        else if(enemyBase.PlayerCheckFront() && !enemyBase.PlayerCheckBack() && enemyBase.AttackState.canAttack)
+        else if (Time.time >= startTime + 1)
         {
-            stateMachine.ChangeState(enemyBase.AttackState);
+            enemyBase.AttackState.canAttack = true;
+
+            if (enemyBase.PlayerCheckFront() && !enemyBase.PlayerCheckBack() && enemyBase.AttackState.canAttack)
+            {
+                stateMachine.ChangeState(enemyBase.AttackState);
+            }
+
+            else if (!enemyBase.PlayerCheckFront() && enemyBase.PlayerCheckBack() && enemyBase.AttackState.canAttack)
+            {
+                enemyBase.Flip();
+                stateMachine.ChangeState(enemyBase.AttackState);
+            }
         }
 
-        else if(!enemyBase.PlayerCheckFront() && enemyBase.PlayerCheckBack() && enemyBase.AttackState.canAttack)
-        {
-            enemyBase.Flip();
-            stateMachine.ChangeState(enemyBase.AttackState);
-        }
     }
 
     public override void PhysicsUpdate()
