@@ -36,7 +36,7 @@ public class EnemyMoveState : EnemyState
             stateMachine.ChangeState(enemyBase.IdleState);
         }
 
-        else if (Time.time >= startTime + 1)
+        else if (Time.time >= startTime + 0.2f)
         {
             enemyBase.AttackState.canAttack = true;
 

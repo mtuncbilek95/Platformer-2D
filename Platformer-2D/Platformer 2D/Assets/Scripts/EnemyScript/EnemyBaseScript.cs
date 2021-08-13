@@ -9,6 +9,7 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
     public EnemyBaseData enemyData;
     public Animator Animator { get; private set; }
     public Rigidbody2D RB { get; private set; }
+    public bool EnemyisDead { get; set; }
     #endregion
 
     #region Enemy State Files
@@ -64,6 +65,7 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
         FacingDirection = -1;
         AttackState.canAttack = true;
         Health = enemyData.health;
+        EnemyisDead = false;
     }
 
     private void Update()
@@ -75,7 +77,6 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
     {
         StateMachine.CurrentState.PhysicsUpdate();
     }
-
     #endregion
 
     #region Check Functions

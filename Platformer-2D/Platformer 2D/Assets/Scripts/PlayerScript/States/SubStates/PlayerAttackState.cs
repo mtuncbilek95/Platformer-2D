@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackState : PlayerAbilityState
 {   
-    private float attackBlockTime = 0.6f;
+    private float attackBlockTime = 1f;
     public PlayerAttackState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animationBoolName) : base(player, stateMachine, playerData, animationBoolName)
     {
     }

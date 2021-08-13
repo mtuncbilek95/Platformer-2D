@@ -36,6 +36,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "7cccbd44-a166-46d4-b2fc-939f717746c5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -130,7 +138,7 @@
                 {
                     "name": "",
                     "id": "6d739985-3e27-4e90-bb29-7b40276f69f5",
-                    "path": "<Keyboard>/numpad4",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -157,6 +165,44 @@
                     "processors": "",
                     "groups": "",
                     "action": "DebugInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4afcae08-268a-4390-bc03-018ce9d5dc5b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "293980fd-b5c6-41d1-bde9-760b6ee978f3",
+            "actions": [
+                {
+                    "name": "Menu Open",
+                    "type": "Button",
+                    "id": "05197354-4cb0-4e76-acdc-91b91b8e50f0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "58305445-65e2-49e0-9e83-6fb2508a427f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu Open",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

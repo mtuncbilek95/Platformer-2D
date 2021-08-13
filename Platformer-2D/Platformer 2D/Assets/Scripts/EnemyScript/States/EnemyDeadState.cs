@@ -26,6 +26,8 @@ public class EnemyDeadState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        enemyBase.EnemyisDead = true;
+
     }
 
     public override void Exit()
