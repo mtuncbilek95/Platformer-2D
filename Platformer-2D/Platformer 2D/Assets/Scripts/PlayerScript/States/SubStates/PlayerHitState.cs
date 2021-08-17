@@ -28,6 +28,7 @@ public class PlayerHitState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        SoundManagerScript.PlaySound("damageTaken");
         isAnimationFinished = false;
         player.canTakeDamage = false;
         player.SetVelocityX(0f);
@@ -48,11 +49,6 @@ public class PlayerHitState : PlayerAbilityState
         if (isAnimationFinished)
         {
             stateMachine.ChangeState(player.IdleState);
-        }
-
-        else if(player.Health <= 0)
-        {
-            stateMachine.ChangeState(player.DeadState);
         }
 
     }

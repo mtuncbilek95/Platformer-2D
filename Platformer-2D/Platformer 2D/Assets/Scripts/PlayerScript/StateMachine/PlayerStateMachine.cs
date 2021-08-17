@@ -1,6 +1,6 @@
 public class PlayerStateMachine
 {
-    public PlayerState CurrentState;
+    public PlayerState CurrentState { get; private set; }
 
     public void Initialize(PlayerState newState)
     {

@@ -19,9 +19,16 @@ public class HealthBarScript : MonoBehaviour
             }
             else
             {
-                hearts[i].SetActive(false);
+                StartCoroutine(HeartDestroyFunction(i));
             }
 
         }
+    }
+    IEnumerator HeartDestroyFunction(int i)
+    {
+        Animator animator = hearts[i].GetComponent<Animator>();
+        animator.SetTrigger("Hit");
+        yield return new WaitForSeconds(0.2f);
+        hearts[i].SetActive(false);
     }
 }

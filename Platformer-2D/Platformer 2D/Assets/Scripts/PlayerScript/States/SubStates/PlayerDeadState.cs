@@ -26,6 +26,8 @@ public class PlayerDeadState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        player.canTakeDamage = false;
+        isAnimationFinished = false;
     }
 
     public override void Exit()

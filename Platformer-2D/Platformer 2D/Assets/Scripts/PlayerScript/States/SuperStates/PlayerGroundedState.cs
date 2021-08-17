@@ -7,6 +7,8 @@ public class PlayerGroundedState : PlayerState
     protected bool isGrounded;
     protected bool jumpInput;
     protected bool attackInput;
+    protected bool interactInput;
+    protected bool canEnterDoor;
     protected int xInput;
     
     public PlayerGroundedState(PlayerScript player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
@@ -36,7 +38,9 @@ public class PlayerGroundedState : PlayerState
         xInput = player.InputHandler.NormXInput;
         jumpInput = player.InputHandler.JumpInput;
         attackInput = player.InputHandler.AttackInput;
-        
+        interactInput = player.InputHandler.InteractInput;
+        canEnterDoor = DoorScript.canBeEntered;
+
         if (attackInput && player.AttackState.CanAttack())
         {
             stateMachine.ChangeState(player.AttackState);
@@ -51,6 +55,11 @@ public class PlayerGroundedState : PlayerState
         else if (!isGrounded)
         {
             stateMachine.ChangeState(player.InAirState);
+        }
+
+        else if(canEnterDoor && interactInput)
+        {
+            stateMachine.ChangeState(player.EnterDoorState);
         }
 
     }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
@@ -27,6 +29,7 @@ public class PlayerScript : MonoBehaviour
     public PlayerAttackState AttackState { get; private set; }
     public PlayerHitState HitState { get; private set; }
     public PlayerDeadState DeadState { get; private set; }
+    public PlayerDoorInState EnterDoorState { get; private set; }
     #endregion
 
     #region Variables
@@ -43,8 +46,14 @@ public class PlayerScript : MonoBehaviour
     public Vector3 groundRaycastOffset;
 
     public bool canTakeDamage;
+    public bool enterTheDoor;
+    #endregion
 
-    public int Health;
+    #region Extras
+    [HideInInspector] public int Health;
+
+    [field: SerializeField]
+    private UnityEvent OnDeadState;
     #endregion
 
     #region Unity Callback Functions
@@ -60,8 +69,9 @@ public class PlayerScript : MonoBehaviour
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attackState");
         HitState = new PlayerHitState(this, StateMachine, playerData, "hitState");
         DeadState = new PlayerDeadState(this, StateMachine, playerData, "deadState");
-        
+        EnterDoorState = new PlayerDoorInState(this, StateMachine, playerData, "doorInState");
     }
+
     private void Start()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -73,11 +83,14 @@ public class PlayerScript : MonoBehaviour
         FacingDirection = 1;
 
         Health = playerData.health;
+
+        enterTheDoor = false;
     }
     private void Update()
     {
         CurrentVelocity = RB.velocity;
         StateMachine.CurrentState.LogicUpdate();
+        enterTheDoor = EnterDoorState.enterTheDoor;
     }
 
     private void FixedUpdate()
@@ -157,8 +170,17 @@ public class PlayerScript : MonoBehaviour
         {
             StateMachine.ChangeState(HitState);
             Health--;
+
+            if (Health == 0)
+            {
+                StateMachine.ChangeState(DeadState);
+                OnDeadState?.Invoke();
+            }
         }
+
+        
     }
+    public void HideObject() => this.gameObject.SetActive(false);
 
     #endregion
 }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7732824781290892481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7732824781456865448}
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1552511393
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4236677631525818213, guid: ec749b1eaea86f24095480e5ebac38b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -154,10 +154,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08429718, y: -0.10954821}
+  m_Offset: {x: 0.15552568, y: -0.10954821}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5689655, y: 0.5}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.625, y: 3.625}
     newSize: {x: 3.625, y: 3.625}
     adaptiveTilingThreshold: 0.5
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.94616127, y: 1.6061122}
+  m_Size: {x: 0.93074894, y: 1.6061122}
   m_EdgeRadius: 0
 --- !u!95 &7732824781456865459
 Animator:
@@ -260,10 +260,14 @@ MonoBehaviour:
     m_ActionId: 6d674ea5-9962-4c0e-84d8-dabc4862c0cb
     m_ActionName: Gameplay/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 05197354-4cb0-4e76-acdc-91b91b8e50f0
+    m_ActionName: Menu/Menu Open[/Keyboard/escape]
+  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7732824781456865462}
-        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
-        m_MethodName: OnDebugInput
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnPauseButton
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -273,8 +277,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: ea40c5f3-8192-4c28-a2db-c263ca3d75a7
-    m_ActionName: Gameplay/DebugInput[/Keyboard/semicolon]
+    m_ActionId: 7cccbd44-a166-46d4-b2fc-939f717746c5
+    m_ActionName: Gameplay/Menu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7732824781456865462}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnInteractInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: doorIn
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3a62e3db-b446-44ec-b5f5-cecbb236d2a0
+    m_ActionName: Gameplay/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -305,7 +325,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 6bc0085e29c6c8e40bc9f23cd5d4dff3, type: 2}
-  stateNames: {fileID: 0}
   groundCheckObject: {fileID: 7732824781290892480}
   weaponRaycastObject: {fileID: 7732824782760729820}
   checkGround:
@@ -314,8 +333,25 @@ MonoBehaviour:
   checkEnemy:
     serializedVersion: 2
     m_Bits: 128
-  groundRaycastOffset: {x: 0.36, y: 0, z: 0}
+  groundRaycastOffset: {x: 0.4, y: 0, z: 0}
   canTakeDamage: 0
+  enterTheDoor: 0
+  Health: 3
+  OnDeadState:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: DeadRestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7732824782760729821
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7732824782760729821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalPosition: {x: 1.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7732824781456865448}

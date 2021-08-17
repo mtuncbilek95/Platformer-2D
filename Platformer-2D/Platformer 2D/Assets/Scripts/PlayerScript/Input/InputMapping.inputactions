@@ -30,9 +30,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "DebugInput",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "ea40c5f3-8192-4c28-a2db-c263ca3d75a7",
+                    "id": "3a62e3db-b446-44ec-b5f5-cecbb236d2a0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -159,19 +159,52 @@
                 },
                 {
                     "name": "",
-                    "id": "d8dfc370-9c94-42b3-b6d8-96f452085718",
-                    "path": "<Keyboard>/semicolon",
+                    "id": "4afcae08-268a-4390-bc03-018ce9d5dc5b",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DebugInput",
+                    "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4afcae08-268a-4390-bc03-018ce9d5dc5b",
-                    "path": "<Keyboard>/escape",
+                    "id": "dcbbdb1c-a967-4004-9681-a8d35cd331fe",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "340d8116-b36b-4dda-984d-40b8d77ebae1",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "716617ca-001b-49e9-a9bb-ca4e7191f345",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26e60b9d-441f-4f99-a812-0122f51b4f3a",
+                    "path": "<XInputController>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
