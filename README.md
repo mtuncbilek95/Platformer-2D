@@ -7,5 +7,4 @@ All the player scripts are made by using State Pattern(No Enums). So if you want
 https://www.youtube.com/watch?v=Pux1GlFwKPs&list=PLy78FINcVmjA0zDBhLuLNL1Jo6xNMMq-W
 
 You can watch a demo gameplay here:
-
 https://youtu.be/AX1MQqn0sp8
