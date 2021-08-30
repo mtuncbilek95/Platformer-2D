@@ -1,9 +1,7 @@
 # Platformer-2D W.I.P
 It is a free 2D platformer game that gets all the sprites from https://pixelfrog-assets.itch.io/kings-and-pigs.
 
-All the player scripts are made by using State Pattern(No Enums). So if you want to check the codes, be my guest. I hope you learn something from it. I tried to learn how to use State Pattern from the video series made by Bardent. You can find him on youtube. Also I will drop his tutorial down below.
-
-https://www.youtube.com/watch?v=Pux1GlFwKPs&list=PLy78FINcVmjA0zDBhLuLNL1Jo6xNMMq-W
+All the player scripts are made by using State Pattern(No Enums). So if you want to check the codes, be my guest. I hope you learn something from it.
 
 You can watch a demo gameplay here:
 https://youtu.be/AX1MQqn0sp8
