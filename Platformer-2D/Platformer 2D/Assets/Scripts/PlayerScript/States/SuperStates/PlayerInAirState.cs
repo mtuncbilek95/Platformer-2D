@@ -40,7 +40,9 @@ public class PlayerInAirState : PlayerState
         jumpInput = player.InputHandler.JumpInput;
         jumpInputStop = player.InputHandler.JumpInputStop;
         attackInput = player.InputHandler.AttackInput;
+
         CheckJumpMultiplier();
+
         if (attackInput && player.AttackState.CanAttack())
         {
             stateMachine.ChangeState(player.AttackState);
