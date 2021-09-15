@@ -18,7 +18,6 @@ public class PlayerDoorInState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
-        SoundManagerScript.PlaySound("winTheGame");
         enterTheDoor = true;
         player.SetVelocityX(0);
         player.SetVelocityY(0);

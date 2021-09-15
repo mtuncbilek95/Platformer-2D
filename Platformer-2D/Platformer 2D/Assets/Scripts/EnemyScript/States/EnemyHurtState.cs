@@ -28,7 +28,6 @@ public class EnemyHurtState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        SoundManagerScript.PlaySound("attack");
         isAnimationFinished = false;
         enemyData.canTakeDamage = false;
         enemyBase.SetVelocityX(0f);

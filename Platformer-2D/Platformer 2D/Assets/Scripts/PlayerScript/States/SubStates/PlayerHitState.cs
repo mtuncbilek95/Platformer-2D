@@ -28,7 +28,6 @@ public class PlayerHitState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
-        SoundManagerScript.PlaySound("damageTaken");
         isAnimationFinished = false;
         player.canTakeDamage = false;
         player.SetVelocityX(0f);

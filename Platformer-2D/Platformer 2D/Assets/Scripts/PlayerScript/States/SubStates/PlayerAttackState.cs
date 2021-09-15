@@ -23,7 +23,6 @@ public class PlayerAttackState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
-        SoundManagerScript.PlaySound("swing");
         player.HitEnemy();
         player.SetVelocityY(6f);
     }

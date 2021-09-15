@@ -115,7 +115,6 @@ public class GameManager : MonoBehaviour
     #region Game Actions
     private void PauseGame()
     {
-        SoundManagerScript.PlayLoop("menuSong");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         GameIsPaused = true;
@@ -133,7 +132,6 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        SoundManagerScript.PlayLoop("gameSong1");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         GameIsPaused = false;
@@ -151,7 +149,6 @@ public class GameManager : MonoBehaviour
 
     public void DeadRestartGame()
     {
-        SoundManagerScript.PlaySound("dead");
         StartCoroutine(DelayRestartGame());
     }
     #endregion
