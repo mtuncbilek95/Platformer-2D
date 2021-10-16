@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy Pig
+  - Cannon Ball
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - Door
   - Interactable
   - Decorations
-  - 
-  - 
-  - 
+  - CannonFire
+  - Cannon Ball
+  - Dead
   - 
   - 
   - 
@@ -45,11 +46,14 @@ TagManager:
   - name: Decorations
     uniqueID: 1189306817
     locked: 0
-  - name: Ground
-    uniqueID: 2431552307
-    locked: 0
   - name: Doors
     uniqueID: 1569570245
+    locked: 0
+  - name: Dead
+    uniqueID: 1348573785
+    locked: 0
+  - name: Ground
+    uniqueID: 2431552307
     locked: 0
   - name: Interactable
     uniqueID: 718712769

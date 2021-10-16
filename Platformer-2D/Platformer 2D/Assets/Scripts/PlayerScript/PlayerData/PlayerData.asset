@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   dragLerpValue: 1
-  groundLayerLength: 0.2
+  groundLayerLength: 0.1
   jumpVelocity: 15
   jumpCount: 1
   jumpHeightMultiplier: 0.5

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3894c2d71cf87644f8b47cb24073918d, type: 3}
   m_Name: EnemyBaseData
   m_EditorClassIdentifier: 
-  health: 1
+  health: 5
   maxSpeed: 3
   weaponRadius: 0.6
-  canTakeDamage: 1
+  canTakeDamage: 0
   ledgeCheckLength: 1
   playerCheckRadius: 0.3

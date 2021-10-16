@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerScript : MonoBehaviour, IDamageable
 {
     #region Components
     public Animator Animator { get; private set; }
@@ -126,7 +126,7 @@ public class PlayerScript : MonoBehaviour
         foreach(Collider2D collider in enemyList)
         {
             IDamageable enemy = collider.GetComponent<IDamageable>();
-            enemy?.DamageEnemy();
+            enemy?.DamageCharacter();
         }
 
     }
@@ -164,7 +164,7 @@ public class PlayerScript : MonoBehaviour
     #region Animation Trigger Functions
     private void AnimationTriggerFunction() => StateMachine.CurrentState.AnimationTrigger();
     private void AnimationFinishTriggerFunction() => StateMachine.CurrentState.AnimationFinishTrigger();
-    public void DamageTaken()
+    public void DamageCharacter()
     {
         if (canTakeDamage)
         {

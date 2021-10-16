@@ -19,6 +19,11 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
     public EnemyHurtState HurtState { get; private set; }
     public EnemyAttackState AttackState { get; private set; }
     public EnemyDeadState DeadState { get; private set; }
+    public EnemyMatchOnState MatchOnState { get; private set; }
+    public EnemyGoToCannonState GoToCannonState { get; private set; }
+    public EnemyLightTheMatchState LightTheMatch { get; private set; }
+    public EnemyLightTheCannonState LightTheCannon { get; private set; }
+
     #endregion
 
     #region Variables
@@ -42,7 +47,7 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
     
     [Header("Unity Events")]
     [field: SerializeField]
-    private UnityEvent OnPlayerHit;
+    private UnityEvent OnPlayerHit,OnFireCannon;
     public int Health { get; set; } 
     #endregion
 
@@ -55,6 +60,10 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
         HurtState = new EnemyHurtState(this, StateMachine, enemyData, "hurtState");
         AttackState = new EnemyAttackState(this, StateMachine, enemyData, "attackState");
         DeadState = new EnemyDeadState(this, StateMachine, enemyData, "deadState");
+        MatchOnState = new EnemyMatchOnState(this, StateMachine, enemyData, "matchOnState");
+        GoToCannonState = new EnemyGoToCannonState(this, StateMachine, enemyData, "goToCannonState");
+        LightTheMatch = new EnemyLightTheMatchState(this, StateMachine, enemyData, "lightTheMatch");
+        LightTheCannon = new EnemyLightTheCannonState(this, StateMachine, enemyData, "lightTheCannon");
     }
 
     private void Start()
@@ -106,7 +115,6 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
         Gizmos.DrawWireSphere(playerCheckObject.position + playerCheckOffset, enemyData.playerCheckRadius);
         Gizmos.DrawWireSphere(playerCheckObject.position - playerCheckOffset, enemyData.playerCheckRadius);
         Gizmos.DrawWireSphere(weaponCollider.position, enemyData.weaponRadius);
-
     }
 
     #endregion
@@ -123,6 +131,24 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
         currentVelocity.Set(velocity, currentVelocity.y);
         RB.velocity = currentVelocity;
     }
+    public void CheckCannonSide()
+    {
+        if (this.transform.position.x - CannonScript.matchPosition.x > 0)
+        {
+            if(FacingDirection > 0)
+            {
+                Flip();
+            }
+
+        }
+        else if(this.transform.position.x - CannonScript.matchPosition.x < 0)
+        {
+            if(FacingDirection < 0)
+            {
+                Flip();
+            }
+        }
+    }
 
     #region Trigger Functions
     private void AnimationTriggerFunction() => StateMachine.CurrentState.AnimationTrigger();
@@ -134,12 +160,24 @@ public class EnemyBaseScript : MonoBehaviour, IDamageable
             OnPlayerHit?.Invoke();
         }
     }
-    public void DamageEnemy()
+    public void DamageCharacter()
     {
         if (enemyData.canTakeDamage)
         {
             StateMachine.ChangeState(HurtState);
         }
+    }
+    public void MoveToCannon()
+    {
+        if(Mathf.Abs(transform.position.x - CannonScript.matchPosition.x) > 0.1f && !PlayerCheckFront() && !PlayerCheckBack())
+        {
+            StateMachine.ChangeState(GoToCannonState);
+        }
+        
+    }
+    public void FireCannon()
+    {
+        OnFireCannon?.Invoke();
     }
     #endregion
 }

@@ -27,7 +27,8 @@ public class PlayerDeadState : PlayerAbilityState
     {
         base.Enter();
         player.canTakeDamage = false;
-        isAnimationFinished = false;
+        player.gameObject.layer = 13;
+
     }
 
     public override void Exit()
